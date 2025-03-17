@@ -4,7 +4,18 @@
 let amigos = [];
 
 //Funcion para hacer la captura de los amigos 
-function capturaAmigos(){
+function capturaAmigos() {
+    let input = document.getElementById("amigo");
+    let nombre = input.value.trim();
+   
+    //Condición para que no se pueda quedar en blanco
+    if (nombre === "") {
+        alert("Por favor, inserte un nombre.");
+        return;
+    }
+   
+    amigos.push(nombre);
 
-//hola
+    // Limpiar el campo de entrada
+    input.value = ""; 
 }
