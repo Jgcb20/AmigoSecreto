@@ -12,10 +12,26 @@ function capturaAmigos() {
     if (nombre === "") {
         alert("Por favor, inserte un nombre.");
         return;
-    }
+    } else{
    
+
     amigos.push(nombre);
 
     // Limpiar el campo de entrada
     input.value = ""; 
+    mostrarAmigos();
+    }
+
+}
+
+// Función para mostrar la lista de amigos
+function mostrarAmigos() {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; // Limpiar lista antes de actualizar
+   
+    for (let amigo of amigos) {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+    }
 }
