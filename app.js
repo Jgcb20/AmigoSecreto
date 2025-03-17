@@ -6,5 +6,5 @@ let amigos = [];
 //Funcion para hacer la captura de los amigos 
 function capturaAmigos(){
 
-
+//hola
 }
